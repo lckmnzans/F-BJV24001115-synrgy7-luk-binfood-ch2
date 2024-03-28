@@ -1,6 +1,10 @@
 package org.example;
 
+import org.example.controller.ConsoleOrderController;
+import org.example.entity.OrderModel;
 import org.example.helper.FileHelper;
+import org.example.view.ConsoleOrderView;
+import org.example.view.OrderView;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,18 +14,26 @@ import java.util.Scanner;
 import static org.example.Const.*;
 
 public class Main {
+    /*
     private static final Scanner inputMenu = new Scanner(System.in);
     private static Order order = null;
     private static final FileHelper fileHelper = new FileHelper();
+    */
     public static void main(String[] args) {
+        /*
         String welcomeMessage =
                 "=".repeat(30) +
                 "\n Selamat datang di Binar Food \n" +
                 "=".repeat(30);
         System.out.println(welcomeMessage);
         showMainMenu();
+        */
+        OrderModel orderModel = new org.example.entity.Order();
+        OrderView orderView = new ConsoleOrderView();
+        ConsoleOrderController orderController = new ConsoleOrderController(orderModel, orderView);
     }
 
+    /*
     public static void showMainMenu() {
         order = Order.getInstance();
         
@@ -117,4 +129,5 @@ public class Main {
             System.exit(0);
         }
     }
+    */
 }
