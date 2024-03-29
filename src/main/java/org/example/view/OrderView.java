@@ -2,7 +2,7 @@ package org.example.view;
 
 public interface OrderView {
     String displayMainMenu();
-    void displaySubMenu(String menu);
     String displaySelectedMenu(String menu);
-    void displayOrderedMenu();
+    int displaySelectedMenuQty(String menuId, String menuName);
+    String displayOrderedMenu(int[][] item);
 }

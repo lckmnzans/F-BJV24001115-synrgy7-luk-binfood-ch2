@@ -11,6 +11,4 @@ abstract class OrderController {
         this.model = model;
         this.view = view;
     }
-
-    abstract void processInput(String userInput);
 }
